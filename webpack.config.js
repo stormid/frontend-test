@@ -45,5 +45,6 @@ module.exports = {
 		  		loader: 'file-loader'
 			}
 		}]
-	}
+	},
+	devtool: 'eval-source-map'
 }
