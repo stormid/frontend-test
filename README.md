@@ -21,7 +21,7 @@ In the default set up the <b>API runs on http://localhost:4000</b>, the <b>app r
 We'll ask you to implement features task-by-task, but here is an overview of the API that you'll be building against:
 
 | Action | Endpoint | Description
-|-|-|
+|-|-|-|
 | GET | /api/todo | Get all todo
 | GET | /api/todo/<task.id> | Get a todo
 | POST | /api/todo | Add a todo
