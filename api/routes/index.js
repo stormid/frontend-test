@@ -19,7 +19,7 @@ module.exports = app => {
     app.get('/api/todo/:id', async (req, res) => {
         setTimeout(async () => {
             try {
-                const result = await Tasks.findById(req.params.id);
+                const result = await Tasks.findByPk(req.params.id);
                 res.json(result);
             }
             catch(e){
@@ -39,7 +39,7 @@ module.exports = app => {
                     createdAt: new Date(),
                     updatedAt: new Date()
                 });
-                const result = await Tasks.findById(id);
+                const result = await Tasks.findByPk(id);
                 res.json(result);
             }
             catch(e){
@@ -52,7 +52,7 @@ module.exports = app => {
         setTimeout(async () => {
             try {
                 await Tasks.update(req.body, { where: { id: req.params.id }});
-                const data = await Tasks.findById(req.params.id);
+                const data = await Tasks.findByPk(req.params.id);
                 res.json(data);
             }
             catch(e){
