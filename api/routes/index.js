@@ -35,7 +35,7 @@ module.exports = app => {
                 await Tasks.create({
                     ...req.body,
                     id,
-                    isDone: 'false',
+                    isDone: req.body.isDone === undefined ? '0' : req.body.isDone,
                     createdAt: new Date(),
                     updatedAt: new Date()
                 });
