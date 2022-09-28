@@ -12,7 +12,7 @@ The app can be set up and run via the command line:
 
 | What | How |
 |-|-|
-| set up (install and db migrations) | `npm i`
+| set up (install and db migrations) (inc clear old db) | `npm i`
 | run api and dev server | `npm start` |
 | run unit tests | `npm t` |
 
