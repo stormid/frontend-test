@@ -20,7 +20,8 @@
   "scripts": {
     "api": "node api",
     "build": "webpack --mode production",
-    "db:create": "npm run db:migrate && npm run db:seed",
+    "db:create": "npm run db:migrate && npm run db:drop && npm run db:seed",
+    "db:drop": "node_modules/.bin/sequelize db:seed:undo:all",
     "db:migrate": "node_modules/.bin/sequelize db:migrate",
     "db:seed": "node_modules/.bin/sequelize db:seed:all",
     "postinstall": "npm run db:create",
